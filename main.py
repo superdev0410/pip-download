@@ -42,7 +42,7 @@ def write_installer(text: str, name: str):
 
     # find all dependencies
     dependencies = [
-        line[line.rindex("\\") + 1:]
+        line[line.rindex("\\") + 1 :]
         for line in lines
         if line[:4] == "File" or line[:5] == "Saved"
     ]
