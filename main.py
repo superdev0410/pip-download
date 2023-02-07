@@ -61,7 +61,7 @@ def main():
     args = get_args()
 
     # download python package and make an installer file
-    out = getoutput(f"pip download {args.name}")
+    out = getoutput(f"pip download {args.name} --timeout 600")
     write_installer(out, args.name)
 
 
